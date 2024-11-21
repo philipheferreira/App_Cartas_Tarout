@@ -1,20 +1,12 @@
 <template>
-  <q-item
-    clickable
-    tag="a"
-    target="_blank"
-    :href="link"
-  >
-    <q-item-section
-      v-if="icon"
-      avatar
-    >
+  <q-item clickable :to="rota">
+    <q-item-section v-if="icon" avatar>
       <q-icon :name="icon" />
     </q-item-section>
 
     <q-item-section>
-      <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>{{ caption }}</q-item-label>
+      <q-item-label>{{ titulo }}</q-item-label>
+      <q-item-label caption>{{ descricao }}</q-item-label>
     </q-item-section>
   </q-item>
 </template>
@@ -25,17 +17,17 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'EssentialLink',
   props: {
-    title: {
+    titulo: {
       type: String,
       required: true
     },
 
-    caption: {
+    descricao: {
       type: String,
       default: ''
     },
 
-    link: {
+    rota: {
       type: String,
       default: '#'
     },

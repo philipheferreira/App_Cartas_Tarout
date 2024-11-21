@@ -1,10 +1,10 @@
 <template>
-  <div>Isso é a pagina principal</div>
+  <div>Isso é um template de cartas</div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'CartasTarot'
 }
 </script>
 
