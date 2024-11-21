@@ -10,8 +10,8 @@
       </div>
       <div class="back">
         <!-- Imagem de trás -->
-        <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Yn5_HWunnZcaPqtrXzc2eQ.jpeg"
-          alt="Imagem Verso" style="width: 240px; height: 400px" />
+        <img :src="imagemVersoCarta" alt="Imagem Verso" style="width: 240px; height: 400px" />
+
       </div>
     </div>
   </div>
@@ -26,6 +26,13 @@ export default {
     return {
       isFlipped: false
     };
+  },
+  props: {
+    imagemVersoCarta: {
+      type: String,
+      required: true
+    },
+
   }
 }
 </script>
