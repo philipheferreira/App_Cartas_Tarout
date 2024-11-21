@@ -18,7 +18,7 @@
           Menu
         </q-item-label>
 
-        <EssentialLink v-for="link in essentialLinks" :key="link.titulo" v-bind="link" />
+        <EssentialLink v-for="link in listaMenuComponentes" :key="link.titulo" v-bind="link" />
       </q-list>
     </q-drawer>
 
@@ -32,22 +32,22 @@
 import { defineComponent, ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
 
-const linksList = [
+const listaMenuComponente = [
   {
     titulo: 'Pagina Inicial',
-    caption: 'Informações Gerais',
+    descricao: 'Informações Gerais',
     icon: 'school',
     rota: '/'
   },
   {
     titulo: 'Jogo Tarot',
-    caption: 'Escolher as cartas que refletem a sorte',
+    descricao: 'Escolher as cartas que refletem a sorte',
     icon: 'chat',
     rota: 'jogoTarot'
   },
   {
     titulo: 'Cartas Tarot',
-    caption: 'Info das cartas no Tarot',
+    descricao: 'Info das cartas no Tarot',
     icon: 'code',
     rota: 'cartasTarot'
   }
@@ -64,7 +64,7 @@ export default defineComponent({
     const leftDrawerOpen = ref(false)
 
     return {
-      essentialLinks: linksList,
+      listaMenuComponentes: listaMenuComponente,
       leftDrawerOpen,
       toggleLeftDrawer() {
         leftDrawerOpen.value = !leftDrawerOpen.value
