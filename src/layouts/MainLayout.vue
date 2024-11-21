@@ -18,7 +18,7 @@
           Menu
         </q-item-label>
 
-        <EssentialLink v-for="link in listaMenuComponentes" :key="link.titulo" v-bind="link" />
+        <listaMenuComponentevue v-for="link in listaMenuComponentes" :key="link.titulo" v-bind="link" />
       </q-list>
     </q-drawer>
 
@@ -30,7 +30,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import listaMenuComponentevue from 'src/components/listaMenuComponentevue'
 
 const listaMenuComponente = [
   {
@@ -57,7 +57,7 @@ export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    EssentialLink
+    listaMenuComponentevue
   },
 
   setup() {
