@@ -30,7 +30,7 @@
 
 <script>
 import { defineComponent, ref } from 'vue'
-import listaMenuComponentevue from 'src/components/listaMenuComponentevue'
+import listaMenuComponentevue from 'src/components/listaMenuComponente.vue'
 
 const listaMenuComponente = [
   {
