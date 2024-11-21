@@ -2,8 +2,8 @@
   <q-page class="flex ">
 
     <cartas :imagemVersoCarta="img1"></cartas>
-
-
+    <cartas :imagemVersoCarta="img2"></cartas>
+    <cartas :imagemVersoCarta="img3"></cartas>
   </q-page>
 </template>
 
@@ -18,7 +18,9 @@ export default defineComponent({
   },
   data() {
     return {
-      img1: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*Yn5_HWunnZcaPqtrXzc2eQ.jpeg"
+      img1: "https://miro.medium.com/v2/resize:fit:720/format:webp/1*Yn5_HWunnZcaPqtrXzc2eQ.jpeg",
+      img2: "",
+      img3: ""
     }
   }
 })
