@@ -138,8 +138,8 @@ export default {
 
 <style>
 .imagemCartas {
-  max-height: 320px;
-  max-width: 200px;
+  max-height: 80%;
+  max-width: 70%;
   min-height: 160px;
   min-width: 100px;
 }
