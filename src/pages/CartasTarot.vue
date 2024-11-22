@@ -5,14 +5,15 @@
 
     <div class="flex justify-center">
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" @click="openChildDialog" src="https://www.astrolink.com.br/data/tarot/o-louco.jpg" />
-        <Carta_O_Louco ref="childDialogRef" />
+        <img class="imagemCartas" @click="abrirModalOLouco" src="https://www.astrolink.com.br/data/tarot/o-louco.jpg" />
+        <Carta_O_Louco ref="OLoucoRef" />
         <div class="text-body2 text-center textoCartas">0 - O Louco</div>
       </div>
 
 
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/o-mago.jpg" />
+        <img class="imagemCartas" @click="abrirModalOMago" src="https://www.astrolink.com.br/data/tarot/o-mago.jpg" />
+        <Carta_O_Mago ref="OMagoRef" />
         <div class="text-body2 text-center textoCartas">I - O Mago</div>
       </div>
 
@@ -123,15 +124,21 @@
 
 <script>
 import Carta_O_Louco from '../modal/infoCartas/1_OLouco.vue'
+import Carta_O_Mago from '../modal/infoCartas/2_OMago.vue'
 export default {
   name: 'CartasTarot',
   components: {
-    Carta_O_Louco
+    Carta_O_Louco,
+    Carta_O_Mago
   },
   methods: {
-    openChildDialog() {
-      this.$refs.childDialogRef.openDialog(); // Chama o método do componente filho
+    abrirModalOLouco() {
+      this.$refs.OLoucoRef.openDialog(); // Chama o método do componente filho
+    },
+    abrirModalOMago() {
+      this.$refs.OMagoRef.openDialog(); // Chama o método do componente filho
     }
+
   }
 }
 </script>
