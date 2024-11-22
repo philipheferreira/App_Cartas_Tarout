@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex justify-center">
+  <q-page class="flex justify-center q-mt-lg">
 
     <cartas :imagemVersoCarta="img1"></cartas>
     <cartas :imagemVersoCarta="img2"></cartas>

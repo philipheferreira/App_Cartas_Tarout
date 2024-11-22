@@ -2,11 +2,14 @@
   <div>
     <div class="text-body1 text-center q-ma-md ">Os 22 Arcanos Maiores</div>
 
+
     <div class="flex justify-center">
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/o-louco.jpg" />
+        <img class="imagemCartas" @click="openChildDialog" src="https://www.astrolink.com.br/data/tarot/o-louco.jpg" />
+        <Carta_O_Louco ref="childDialogRef" />
         <div class="text-body2 text-center textoCartas">0 - O Louco</div>
       </div>
+
 
       <div class="q-my-lg q-mx-lg column items-center">
         <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/o-mago.jpg" />
@@ -119,8 +122,17 @@
 </template>
 
 <script>
+import Carta_O_Louco from '../modal/infoCartas/1_OLouco.vue'
 export default {
-  name: 'CartasTarot'
+  name: 'CartasTarot',
+  components: {
+    Carta_O_Louco
+  },
+  methods: {
+    openChildDialog() {
+      this.$refs.childDialogRef.openDialog(); // Chama o método do componente filho
+    }
+  }
 }
 </script>
 
@@ -130,6 +142,10 @@ export default {
   max-width: 200px;
   min-height: 160px;
   min-width: 100px;
+}
+
+.imagemCartas:hover {
+  cursor: pointer;
 }
 
 .textoCartas {
