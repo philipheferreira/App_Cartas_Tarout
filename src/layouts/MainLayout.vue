@@ -18,7 +18,7 @@
           Menu
         </q-item-label>
 
-        <listaMenuComponentevue v-for="link in listaMenuComponentes" :key="link.titulo" v-bind="link" />
+        <listaMenuComponentevue v-for="component in listaMenuComponentes" :key="component.titulo" v-bind="component" />
       </q-list>
     </q-drawer>
 
