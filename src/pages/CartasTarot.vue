@@ -126,8 +126,8 @@ export default {
 
 <style>
 .imagemCartas {
-  height: 160px;
-  width: 100px;
+  max-height: 160px;
+  max-width: 100px;
 }
 
 .textoCartas {
