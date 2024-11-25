@@ -18,7 +18,9 @@
       </div>
 
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/a-sacerdotisa.jpg" />
+        <img class="imagemCartas" @click="abrirModalASacerdotisa"
+          src="https://www.astrolink.com.br/data/tarot/a-sacerdotisa.jpg" />
+        <Carta_A_Sacerdotisa ref="ASacerdotisaRef" />
         <div class="text-body2 text-center textoCartas">II - A Sacerdotisa</div>
       </div>
 
@@ -125,11 +127,13 @@
 <script>
 import Carta_O_Louco from '../modal/infoCartas/1_OLouco.vue'
 import Carta_O_Mago from '../modal/infoCartas/2_OMago.vue'
+import Carta_A_Sacerdotisa from '../modal/infoCartas/3_ASacerdotisa.vue'
 export default {
   name: 'CartasTarot',
   components: {
     Carta_O_Louco,
-    Carta_O_Mago
+    Carta_O_Mago,
+    Carta_A_Sacerdotisa
   },
   methods: {
     abrirModalOLouco() {
@@ -137,6 +141,9 @@ export default {
     },
     abrirModalOMago() {
       this.$refs.OMagoRef.openDialog(); // Chama o método do componente filho
+    },
+    abrirModalASacerdotisa() {
+      this.$refs.ASacerdotisaRef.openDialog(); // chama o método do componente filho
     }
 
   }
