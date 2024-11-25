@@ -136,6 +136,10 @@ import Carta_A_Sacerdotisa from '../modal/infoCartas/3_ASacerdotisa.vue'
 import Carta_A_Imperatriz from '../modal/infoCartas/4_AImperatriz.vue'
 import Carta_O_Imperador from '../modal/infoCartas/5_OImperador.vue'
 import Carta_O_Papa from '../modal/infoCartas/6_OPapa.vue'
+import Carta_Os_Enamorados from '../modal/infoCartas/7_OsEnamorados.vue'
+import Carta_O_Carro from '../modal/infoCartas/8_OCarro.vue'
+import Carta_A_Forca from '../modal/infoCartas/9_AForca.vue'
+import Carta_O_Eremita from '../modal/infoCartas/10_OEremita.vue'
 
 export default {
   name: 'CartasTarot',
@@ -145,7 +149,11 @@ export default {
     Carta_A_Sacerdotisa,
     Carta_A_Imperatriz,
     Carta_O_Imperador,
-    Carta_O_Papa
+    Carta_O_Papa,
+    Carta_Os_Enamorados,
+    Carta_O_Carro,
+    Carta_A_Forca,
+    Carta_O_Eremita
   },
   methods: {
     abrirModalOLouco() {
@@ -165,6 +173,18 @@ export default {
     },
     abrirModalOPapa() {
       this.$refs.OPapaRef.openDialog(); // chama o método do componente filho
+    },
+    abrirModalOsEnamorados() {
+      this.$refs.OsEnamoradosRef.openDialog(); // chama o método do componente filho
+    },
+    abrirModalOCarro() {
+      this.$refs.OCarroRef.openDialog(); // chama o método do componente filho
+    },
+    abrirModalAForca() {
+      this.$refs.AForcaRef.openDialog(); // chama o método do componente filho
+    },
+    abrirModalOEremita() {
+      this.$refs.OEremitaRef.openDialog(); // chama o método do componente filho
     }
 
   }
