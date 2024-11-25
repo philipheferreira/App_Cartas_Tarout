@@ -3,7 +3,7 @@
   <q-dialog v-model="isOpen">
     <q-card style="max-width: 70%;" transition-show="rotate" transition-hide="rotate">
       <q-card-section>
-        <div class="text-h6">II - O Mago</div>
+        <div class="text-h6">I - O Mago</div>
       </q-card-section>
       <q-card-section>
         Este é um conteúdo vindo do componente filho.

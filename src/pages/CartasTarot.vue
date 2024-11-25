@@ -45,22 +45,29 @@
       </div>
 
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/os-enamorados.jpg" />
+        <img class="imagemCartas" @click="abrirModalOsEnamorados"
+          src="https://www.astrolink.com.br/data/tarot/os-enamorados.jpg" />
+        <Carta_Os_Enamorados ref="OsEnamoradosRef" />
         <div class="text-body2 text-center textoCartas">VI - Os Enamorados</div>
       </div>
 
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/o-carro.jpg" />
-        <div class="text-body2 text-center textoCartas">VII - O Carro</div>
+        <img class="imagemCartas" @click="abrirModalOCarro" src="https://www.astrolink.com.br/data/tarot/o-carro.jpg" />
+        <Carta_O_Carro ref="OCarroRef" />
+        <div class="text-body2 text-center textoCartas">VII - O Carro
+        </div>
       </div>
 
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/a-forca.jpg" />
+        <img class="imagemCartas" @click="abrirModalAForca" src="https://www.astrolink.com.br/data/tarot/a-forca.jpg" />
+        <Carta_A_Forca ref="AForcaRef" />
         <div class="text-body2 text-center textoCartas">VIII- A forca</div>
       </div>
 
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/o-eremita.jpg" />
+        <img class="imagemCartas" @click="abrirModalOEremita"
+          src="https://www.astrolink.com.br/data/tarot/o-eremita.jpg" />
+        <Carta_O_Eremita ref="OEremitaRef" />
         <div class="text-body2 text-center textoCartas">IX - O Eremita</div>
       </div>
 

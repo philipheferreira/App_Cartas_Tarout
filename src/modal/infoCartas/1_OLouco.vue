@@ -3,7 +3,7 @@
   <q-dialog v-model="isOpen" transition-show="rotate" transition-hide="rotate">
     <q-card style="max-width: 70%;">
       <q-card-section>
-        <div class="text-h6">I - O Louco</div>
+        <div class="text-h6">0 - O Louco</div>
       </q-card-section>
 
       <q-card-section>
