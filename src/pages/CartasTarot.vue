@@ -25,17 +25,22 @@
       </div>
 
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/a-imperatriz.jpg" />
+        <img class="imagemCartas" @click="abrirModalAImperatriz"
+          src="https://www.astrolink.com.br/data/tarot/a-imperatriz.jpg" />
+        <Carta_A_Imperatriz ref="AImperatrizRef" />
         <div class="text-body2 text-center textoCartas">III - A Imperatriz</div>
       </div>
 
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/o-imperador.jpg" />
+        <img class="imagemCartas" @click="abrirModalOImperador"
+          src="https://www.astrolink.com.br/data/tarot/o-imperador.jpg" />
+        <Carta_O_Imperador ref="OImperadorRef" />
         <div class="text-body2 text-center textoCartas">IV - O Imperador</div>
       </div>
 
       <div class="q-my-lg q-mx-lg column items-center">
-        <img class="imagemCartas" src="https://www.astrolink.com.br/data/tarot/o-papa.jpg" />
+        <img class="imagemCartas" @click="abrirModalOPapa" src="https://www.astrolink.com.br/data/tarot/o-papa.jpg" />
+        <Carta_O_Papa ref="OPapaRef" />
         <div class="text-body2 text-center textoCartas">V - O Papa</div>
       </div>
 
@@ -128,12 +133,19 @@
 import Carta_O_Louco from '../modal/infoCartas/1_OLouco.vue'
 import Carta_O_Mago from '../modal/infoCartas/2_OMago.vue'
 import Carta_A_Sacerdotisa from '../modal/infoCartas/3_ASacerdotisa.vue'
+import Carta_A_Imperatriz from '../modal/infoCartas/4_AImperatriz.vue'
+import Carta_O_Imperador from '../modal/infoCartas/5_OImperador.vue'
+import Carta_O_Papa from '../modal/infoCartas/6_OPapa.vue'
+
 export default {
   name: 'CartasTarot',
   components: {
     Carta_O_Louco,
     Carta_O_Mago,
-    Carta_A_Sacerdotisa
+    Carta_A_Sacerdotisa,
+    Carta_A_Imperatriz,
+    Carta_O_Imperador,
+    Carta_O_Papa
   },
   methods: {
     abrirModalOLouco() {
@@ -144,6 +156,15 @@ export default {
     },
     abrirModalASacerdotisa() {
       this.$refs.ASacerdotisaRef.openDialog(); // chama o método do componente filho
+    },
+    abrirModalAImperatriz() {
+      this.$refs.AImperatrizRef.openDialog(); // chama o método do componente filho
+    },
+    abrirModalOImperador() {
+      this.$refs.OImperadorRef.openDialog(); // chama o método do componente filho
+    },
+    abrirModalOPapa() {
+      this.$refs.OPapaRef.openDialog(); // chama o método do componente filho
     }
 
   }

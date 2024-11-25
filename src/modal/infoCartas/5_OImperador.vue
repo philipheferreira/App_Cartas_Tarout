@@ -3,11 +3,11 @@
   <q-dialog v-model="isOpen" transition-show="rotate" transition-hide="rotate">
     <q-card style="max-width: 70%;">
       <q-card-section>
-        <div class="text-h6">III - A Sacerdotisa</div>
+        <div class="text-h6">V - O Imperador</div>
       </q-card-section>
 
       <q-card-section>
-        Informações sobre a carta A Sacerdotisa
+        Informações sobre a carta O Imperador
       </q-card-section>
 
       <q-separator />
